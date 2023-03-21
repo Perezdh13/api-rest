@@ -1,22 +1,35 @@
 package com.example.Api.Rest.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
-@Table(name= "consult")
+@Entity
+@Table(name = "voices")
 public class CVoices {
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column (name = "id", nullable = false)
-    private long id;
-    @Column (name = "name", nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
-    @Column(name = "mail",nullable = false)
-    private String mail;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public CVoices(){
+        this.id = id;
+        this.name = name;
+
+        
+    }
 }
