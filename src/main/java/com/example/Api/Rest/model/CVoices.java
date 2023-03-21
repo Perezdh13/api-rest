@@ -3,7 +3,6 @@ package com.example.Api.Rest.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -12,7 +11,6 @@ import lombok.*;
 @Table(name= "consult")
 public class CVoices {
 
-    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id", nullable = false)
     private long id;
