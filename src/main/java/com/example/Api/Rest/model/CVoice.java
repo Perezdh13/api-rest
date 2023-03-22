@@ -4,17 +4,17 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "voices")
-public class CVoices {
+public class CVoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -26,7 +26,7 @@ public class CVoices {
         this.name = name;
     }
 
-    public CVoices(){
+    public CVoice(){
         this.id = id;
         this.name = name;
 
