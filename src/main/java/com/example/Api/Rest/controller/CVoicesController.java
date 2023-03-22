@@ -34,8 +34,5 @@ public class CVoicesController {
     public String deleteVoice(@PathVariable Long id) {
         return cVoiceService.deleteUserById(id);
     }
-    /*@GetMapping("/voices")
-    public void home(){
-       return ;
-    }*/
+    
 }
