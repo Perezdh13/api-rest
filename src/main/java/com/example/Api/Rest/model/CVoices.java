@@ -30,6 +30,6 @@ public class CVoices {
         this.id = id;
         this.name = name;
 
-        
+
     }
 }

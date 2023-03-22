@@ -11,7 +11,7 @@ public class CVoicesController {
 
 
     @GetMapping("/voices")
-    public String home(){
-       return "home";
+    public void home(){
+       return ;
     }
 }
