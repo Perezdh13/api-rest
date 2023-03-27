@@ -1,10 +1,10 @@
 package com.example.Api.Rest.model;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "voices")
 public class CVoice {
+    public CVoice(){}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
