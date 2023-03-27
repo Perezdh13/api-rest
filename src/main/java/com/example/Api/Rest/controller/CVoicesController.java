@@ -34,5 +34,4 @@ public class CVoicesController {
     public String deleteVoice(@PathVariable Long id) {
         return cVoiceService.deleteUserById(id);
     }
-    
 }
