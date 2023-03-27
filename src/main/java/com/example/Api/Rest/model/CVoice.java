@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "voices")
 public class CVoice {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,7 +13,6 @@ public class CVoice {
     private int price;
     private String category;
     private String urlImg;
-    private String urlVideo;
 
     public String getEmail() {
         return email;
@@ -48,14 +46,6 @@ public class CVoice {
         this.urlImg = urlImg;
     }
 
-    public String getUrlVideo() {
-        return urlVideo;
-    }
-
-    public void setUrlVideo(String urlVideo) {
-        this.urlVideo = urlVideo;
-    }
-
     public Long getId() {
         return id;
     }
@@ -72,14 +62,12 @@ public class CVoice {
         this.name = name;
     }
 
-    public CVoice(Long id, String name, String email, int price, String category, String urlImg, String urlVideo) {
+    public CVoice(Long id, String name, String email, int price, String category, String urlImg) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.price = price;
         this.category = category;
         this.urlImg = urlImg;
-        this.urlVideo = urlVideo;
     }
-
 }
