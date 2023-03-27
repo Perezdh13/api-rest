@@ -1,10 +1,10 @@
 package com.example.Api.Rest.model;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "voices")
 public class CVoice {
+    public CVoice(){}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -46,17 +46,6 @@ public class CVoice {
         this.urlImg = urlImg;
     }
 
-    public String getUrlVideo() {
-        return urlVideo;
-    }
-
-    public void setUrlVideo(String urlVideo) {
-        this.urlVideo = urlVideo;
-    }
-
-    private String urlVideo;
-
-
     public Long getId() {
         return id;
     }
@@ -73,10 +62,12 @@ public class CVoice {
         this.name = name;
     }
 
-    public CVoice(){
+    public CVoice(Long id, String name, String email, int price, String category, String urlImg) {
         this.id = id;
         this.name = name;
-
-
+        this.email = email;
+        this.price = price;
+        this.category = category;
+        this.urlImg = urlImg;
     }
 }

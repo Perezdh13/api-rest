@@ -2,7 +2,12 @@ package com.example.Api.Rest.controller;
 
 import com.example.Api.Rest.model.CVoice;
 import com.example.Api.Rest.services.CVoiceService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -31,8 +36,12 @@ public class CVoicesController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public String deleteVoice(@PathVariable Long id) {
-        return cVoiceService.deleteUserById(id);
+    public String deleteVoice(@PathVariable Long id) { return cVoiceService.deleteUserById(id);
+    }
+
+    @PutMapping()
+    public CVoice updateVoice(@RequestBody CVoice cvoice) {
+       return cVoiceService.updateVoice(cvoice);
     }
 
 }

@@ -35,4 +35,9 @@ public class CVoiceService {
             return "No se ha podido borrar" + error;
         }
     }
+
+    public CVoice updateVoice(CVoice userModel) {
+        return iVoices.save(userModel);
+    }
+
 }
