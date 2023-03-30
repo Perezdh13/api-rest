@@ -12,6 +12,7 @@ public class CVoice {
     private String email;
     private int price;
     private String category;
+    @Column(columnDefinition = "LONGTEXT")
     private String urlImg;
 
     public String getEmail() {
